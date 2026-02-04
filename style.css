@@ -1,0 +1,416 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e91e63;
+}
+
+/* Search Bar */
+.search-bar input {
+  width: 600px;          /* increased width */
+  padding: 8px 12px;     /* slightly larger padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+/* Magnifying Glass Icon */
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #666;
+  font-size: 16px;
+  pointer-events: none; /* makes sure clicks go to input */
+}
+
+
+/* Right Side Navbar Options */
+.nav-right a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.nav-right a:hover {
+  color: #e91e63;
+}
+
+/* Category Menu */
+.category-menu {
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.category-menu li {
+  margin: 0 10px;
+}
+
+.category-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.category-menu a:hover {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* Sections for scrolling */
+.section {
+  min-height: 100vh;
+  padding: 40px;
+  border-bottom: 1px solid #ccc;
+}
+.section h2 {
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+/* Right side navbar container */
+.nav-right {
+  display: flex;
+  gap: 30px; /* space between items */
+}
+
+/* Each item (Profile, Cart) */
+.nav-item {
+  display: flex;
+  flex-direction: column; /* icon on top, text below */
+  align-items: center;    /* center horizontally */
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Icon styling */
+.nav-item i {
+  font-size: 22px;   /* bigger icon */
+  margin-bottom: 5px; /* space between icon and text */
+  color: #e91e63;    /* pinkish color like Meesho */
+}
+
+/* Hover effect */
+.nav-item:hover {
+  color: #e91e63;
+}
+.search-bar {
+  position: relative;
+  display: inline-block;
+}
+
+.search-bar input {
+  width: 500px;              /* wider search bar */
+  padding: 8px 35px 8px 35px; /* extra left padding for icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Magnifying Glass Icon */
+.search-icon {
+  position: absolute;
+  left: 10px;                /* position inside input */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 16px;
+  pointer-events: none;       /* clicks go to input, not icon */
+}
+/* Feature Bar */
+.feature-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Feature Bar Container */
+.feature-bar {
+  display: flex;                  /* horizontal layout */
+  justify-content: space-around;  /* spread items evenly */
+  align-items: center;
+  background: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Each Feature Item Card */
+.feature-item {
+  display: flex;
+  flex-direction: column;   /* icon on top, text below */
+  align-items: center;
+  justify-content: flex-end; /* push text to the right */
+  width: 70px;             /* fixed width for uniform cards */
+  padding: 15px;
+  border: 1px solid #ccc;   /* border around each card */
+  border-radius: 10px;      /* rounded corners */
+  background: #ffffff;         /* white background for card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Icon Styling */
+.feature-item i { /* icon and text in same line */
+  font-size: 28px;
+  color: #e91e63;           /* pink accent */
+  margin-bottom: 8px;
+}
+
+/* Text Styling */
+.feature-item span { /* text and icon in same line */
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Hover Effect */
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(247, 156, 234, 0.1);
+}
+.promo-banner {
+  text-align: center;
+  margin: 20px 0;
+  height: 150px;
+  width: auto;
+}
+.promo-banner img {
+  max-width: 2400px;
+  max-height: 330px;
+  object-fit: contain;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Feature Bar Container */
+.feature-bar {
+  display: flex;                  /* horizontal layout */
+  justify-content: center;        /* center across page */
+  align-items: center;
+  gap: 30px;                      /* spacing between cards */
+  background: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Each Feature Item Card */
+.feature-item {
+  display: flex;
+  flex-direction: column;         /* icon on top, text below */
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;            /* rounded corners */
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Icon Styling */
+.feature-item i {
+  font-size: 32px;
+  color: #e91e63;                 /* pink accent to match screenshot */
+  margin-bottom: 10px;
+}
+
+/* Text Styling */
+.feature-item span {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Hover Effect */
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Feature Bar */
+.feature-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-item i {
+  font-size: 30px;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.feature-item span {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Categories Section */
+.categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Grid Layout */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Each Card */
+.category-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;   /* circular images */
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+}
+
+.category-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+/* Categories Section */
+.categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Grid Layout */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Each Card (now clickable links) */
+.category-card {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;   /* remove underline from links */
+  color: inherit;          /* keep text color consistent */
+}
+
+.category-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;      /* circular images */
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+  border-color: #e91e63;   /* pink border on hover */
+}
+
+.category-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
