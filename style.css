@@ -414,3 +414,496 @@ html {
   font-weight: bold;
   color: #333;
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .nav-right a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Feature Bar */
+.feature-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-item i {
+  font-size: 30px;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.feature-item span {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Categories Section */
+.categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.category-card {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+  border-color: #e91e63;
+}
+
+.category-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-right {
+    margin-top: 10px;
+  }
+
+  .feature-bar {
+    flex-direction: column;   /* stack features vertically */
+    gap: 15px;
+  }
+
+  .feature-item {
+    width: 100%;              /* full width on mobile */
+    max-width: 300px;
+  }
+
+  .categories h2 {
+    font-size: 20px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+  }
+}
+
+/* Desktop (min-width: 769px) */
+@media (min-width: 769px) {
+  .feature-bar {
+    flex-direction: row;      /* horizontal layout */
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
+  }
+}
+/* Horizontal Scroll Category Menu */
+.category-scroll {
+  display: flex;
+  overflow-x: auto;          /* enable horizontal scrolling */
+  white-space: nowrap;       /* keep items in one line */
+  background: #f5f5f5;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  scrollbar-width: thin;     /* Firefox */
+}
+
+.category-scroll::-webkit-scrollbar {
+  height: 10px;               /* scrollbar height */
+}
+
+.category-scroll::-webkit-scrollbar-thumb {
+  background: #e91e63;       /* pink scrollbar */
+  border-radius: 10px;
+}
+
+.category-scroll a {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.category-scroll a:hover {
+  background: #e91e63;
+  color: #fff;
+}
+/* Horizontal Scroll with Image */
+.category-scroll {
+  display: flex;
+  overflow-x: auto;          /* enable horizontal scrolling */
+  white-space: nowrap;       /* keep items in one line */
+  gap: 20px;                 /* ✅ adds space between each category */
+  padding: 15px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  scrollbar-width: thin;     /* Firefox */
+}
+
+.category-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-scroll::-webkit-scrollbar-thumb {
+  background: #e91e63;
+  border-radius: 10px;
+}
+
+/* Each Category Card */
+.category-card {
+  flex: 0 0 auto;            /* prevent shrinking */
+  text-align: center;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+  border-color: #e91e63;
+}
+
+.category-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+/* All Category Images Same Size */
+.category-card img {
+  width: 125px;      /* fixed width */
+  height: 125px;     /* fixed height */
+  border-radius: 50%; /* circular shape */
+  object-fit: cover;  /* crop nicely */
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Remove any special size rules like :first-child */
+/* promoition Banner Image */
+.promoition-banner img {
+  width: 2000px;       /* make it stretch across the container */
+  max-width: 2000px; /* optional: limit maximum width */
+  max-height: 500px; /* optional: limit maximum height */
+  height: auto;      /* keep proportions */
+  display: block;
+  margin: 0 auto;    /* center the image */
+}
+/* promoition Banner */
+.promoition-banner {
+  display: flex;
+  justify-content: flex-start;  /* ✅ align content to the left */
+  padding: 20px;
+  background: #fff;             /* optional background */
+}
+
+/* Image Styling */
+.promoition-banner img {
+  width: 3000px;   /* ✅ fixed width for proper fit */
+  height: auto;   /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+}
+/* Horizontal Scroll with Images */
+.brand-scroll {
+  display: flex;
+  overflow-x: auto;          /* enable horizontal scrolling */
+  white-space: nowrap;       /* keep items in one line */
+  gap: 25px;                 /* space between items */
+  padding: 15px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  scrollbar-width: thin;     /* Firefox */
+}
+
+.brand-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.brand-scroll::-webkit-scrollbar-thumb {
+  background: #e91e63;
+  border-radius: 10px;
+}
+
+/* Each Card */
+.brand-card {
+  flex: 0 0 auto;            /* fixed size, no shrinking */
+  text-align: center;
+  cursor: pointer;
+}
+
+.brand-card img {
+  width: 100px;              /* ✅ same size for all images */
+  height: 100px;
+  border-radius: 50%;        /* circular images */
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.brand-card img:hover {
+  transform: scale(1.1);
+  border-color: #e91e63;
+}
+
+.brand-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+/* Style for all buttons */
+button {
+  background: #fff;          /* keep background white or any color you prefer */
+  color: blue;               /* ✅ text color set to blue */
+  border: 2px solid blue;    /* optional: blue border */
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+  background: blue;          /* background turns blue on hover */
+  color: #fff;               /* text turns white on hover */
+}
+/* Original Brands Button */
+.brand-btn {
+  background-color: blue;   /* ✅ blue background */
+  color: #fff;              /* white text for contrast */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.brand-btn:hover {
+  background-color: darkblue; /* darker blue on hover */
+}
+/* Logo Carousel Container */
+.logo-carousel {
+  overflow: hidden;        /* hide scrollbars */
+  background: #f5f5f5;
+  padding: 20px 0;
+}
+
+/* Track that scrolls */
+.logo-track {
+  display: flex;
+  gap: 40px;               /* space between logos */
+  animation: scroll 20s linear infinite; /* auto scroll */
+}
+
+/* Logos */
+.logo-track img {
+  height: 60px;            /* fixed height for all logos */
+  width: auto;             /* keep proportions */
+  flex: 0 0 auto;          /* prevent shrinking */
+  transition: transform 0.3s ease;
+}
+
+.logo-track img:hover {
+  transform: scale(1.1);   /* zoom on hover */
+}
+
+/* Keyframes for auto scrolling */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move left */
+}
+/* Product Grid */
+.products {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  background: #fff;
+}
+
+.product-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.product-card .rating {
+  font-size: 14px;
+  color: #555;
+}
+
+.product-card button {
+  background: blue;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: darkblue;
+}
+
+/* Cart Section */
+.cart {
+  margin: 30px;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.cart h2 {
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+/* Cart Buttons */
+.cart button {
+  background: blue;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cart button:hover {
+  background: darkblue;
+}
+
+.remove-btn {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-btn:hover {
+  background: darkred;
+}
